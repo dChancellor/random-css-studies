@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  root{
+    width:100vw;
+    height:100vh;
+  }
+  body {
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+  }
+  .square{
+    width:200px;
+    height:200px;
+    position:absolute;
+  }
+  .node2{
+    transform-origin: bottom right;
+    transform: rotateZ(72deg)
+  }
+  .node3{
+    transform-origin: bottom right;
+    transform: rotateZ(144deg)
+  }
+  .node4{
+    transform-origin: bottom right;
+    transform: rotateZ(216deg)
+  }
+  .node5{
+    transform-origin: bottom right;
+    transform: rotateZ(288deg)
+  }
+  #red {
+    outline: 5px red solid;
+  }
+  #blue {
+    outline: 5px blue solid;
+    transform: rotateY(20deg);
+    transform-origin: right;
+    animation-duration: .5s;
+    animation-name: animation;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  #green {
+    outline: 5px green solid;
+    transform: rotateY(30deg);
+    transform-origin: right;
+    animation-duration: .5s;
+    animation-name: animation2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes animation {
+    from{
+      transform: rotateY(20deg);
+    }
+    to{
+      transform:rotateY(30deg);
+    }
+  }
+
+  @keyframes animation2 {
+    from{
+      transform: rotateY(30deg);
+    }
+    to{
+      transform:rotateY(40deg);
+    }
+  }
